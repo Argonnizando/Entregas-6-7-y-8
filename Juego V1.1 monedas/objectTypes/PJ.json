@@ -1,0 +1,55 @@
+{
+	"name": "PJ",
+	"plugin-id": "Sprite",
+	"sid": 931102445492010,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Plataforma",
+			"sid": 286760369155327
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "DesplazarHasta",
+			"sid": 285895414825724
+		},
+		{
+			"behaviorId": "wrap",
+			"name": "Rodear",
+			"sid": 596407822583184
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8115558,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 811829927523454,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

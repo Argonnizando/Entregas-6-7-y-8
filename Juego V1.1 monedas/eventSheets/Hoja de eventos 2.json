@@ -1,0 +1,247 @@
+{
+	"name": "Hoja de eventos 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "monedas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 910521427553686
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 231042269222286,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PJ",
+					"sid": 622202683403622,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 385536742253531
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 105437355850185,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PJ",
+					"sid": 260871570668245,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 240977269284702
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 952789842740832,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PJ",
+					"sid": 577453257788153,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 269717449741468
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PJ",
+					"sid": 108148093942220,
+					"parameters": {
+						"object": "Sprite3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PJ",
+					"sid": 405950531791568
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 282234041244307,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Sprite",
+					"sid": 949118878931185,
+					"parameters": {
+						"object": "PJ",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pixilframe",
+					"sid": 700489463596042,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pixilframe3",
+					"sid": 509637127217738,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite5",
+					"sid": 127931744112166,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 900001261045028,
+					"parameters": {
+						"variable": "monedas"
+					}
+				}
+			],
+			"sid": 409173159784837
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PJ",
+					"sid": 456448071744374,
+					"parameters": {
+						"object": "Sprite5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Sprite5",
+					"sid": 486656230321009,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 849025071715639,
+					"parameters": {
+						"variable": "monedas",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 428984986945818
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PJ",
+					"sid": 893530578493297,
+					"parameters": {
+						"object": "Sprite2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PJ",
+					"sid": 622565857098469
+				},
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 608326933738585,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 135275016044148
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 227883228788341
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Texto",
+					"sid": 803551287168195,
+					"parameters": {
+						"text": "monedas"
+					}
+				}
+			],
+			"sid": 299001440322747
+		}
+	],
+	"sid": 156600719391419
+}
