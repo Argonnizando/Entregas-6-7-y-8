@@ -1,0 +1,48 @@
+{
+	"name": "Hoja de eventos 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 713343656181137,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "start2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "start2",
+					"sid": 126280600515477,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 643499927872221,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 788928716060852,
+					"parameters": {
+						"layout": "Menú Inicio"
+					}
+				}
+			],
+			"sid": 242020364180022
+		}
+	],
+	"sid": 746375814115233
+}
